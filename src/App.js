@@ -2,9 +2,25 @@ import "./App.css";
 import Age from "./pages/Age";
 import Gender from "./pages/Gender";
 import Nation from "./pages/Nation";
+import { useState } from "react";
+
 import { Switch, Route, NavLink } from "react-router-dom";
+import { even } from "check-types";
 
 function App() {
+  //   const [name, setName] = useState([]);
+
+  //   function handleInputChange(event) {
+  //     const inputValue = event.target.value;
+  //     setName(inputValue);
+  //     console.log(inputValue);
+  //   }
+
+  //   function handleSubmit(event){
+  //     event.preventDefault()
+
+  // }
+
   return (
     <div className="App">
       <header className="App__header">
