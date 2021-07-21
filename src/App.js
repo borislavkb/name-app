@@ -20,14 +20,27 @@ function App() {
           ></input>
           <button type="submit">Submit</button>
         </form>
+        <Switch>
+          <Route path="/age">
+            <Age />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/nation">
+            <Nation />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/gender">
+            <Gender />
+          </Route>
+        </Switch>
       </main>
       <footer>
         <nav className="App__footer">
-          <Switch>
-            <a href="Age">Age</a>
-            <a href="Nation">Nation</a>
-            <a href="Gender">Gender</a>
-          </Switch>
+          <NavLink to="Age">Age</NavLink>
+          <NavLink to="Nation">Nation</NavLink>
+          <NavLink to="Gender">Gender</NavLink>
         </nav>
       </footer>
     </div>
