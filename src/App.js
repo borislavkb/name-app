@@ -3,6 +3,7 @@ import Age from "./pages/Age";
 import Gender from "./pages/Gender";
 import Nation from "./pages/Nation";
 import { useEffect, useState } from "react";
+import Header from "./components/Header";
 
 import { Switch, Route, NavLink } from "react-router-dom";
 import { even } from "check-types";
@@ -32,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <header className="App__header">
-        <h1>Guess your Age</h1>
+        <Header />
       </header>
       <main className="App__main">
         <form>
