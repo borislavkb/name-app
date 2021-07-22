@@ -1,4 +1,4 @@
-export default function Form() {
+export default function Form({ handleSubmitForm, handleOnChangeName }) {
   return (
     <form onSubmit={handleSubmitForm}>
       <input
@@ -6,8 +6,8 @@ export default function Form() {
         name="inputName"
         id="inputName"
         placeholder="Type a name"
+        onChange={handleOnChangeName}
       ></input>
-      <button type="submit">Submit</button>
     </form>
   );
 }

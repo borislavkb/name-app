@@ -1,7 +1,7 @@
-export default function Age() {
+export default function Age({ age }) {
   return (
     <div>
-      <p>This is the result for Age</p>
+      <p>Your age is {age}</p>
     </div>
   );
 }

@@ -2,33 +2,46 @@ import "./App.css";
 import Age from "./pages/Age";
 import Gender from "./pages/Gender";
 import Nation from "./pages/Nation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header";
 import Form from "./components/Form";
-
 import { Switch, Route, NavLink } from "react-router-dom";
-import { even } from "check-types";
 
-function App() {
-  const [nationality, setNationality] = useState([]);
+export function App() {
+  const [age, setAge] = useState(null);
 
-  //   const url = "https://api.nationalize.io/?name=michael";
-  //   fetch(url)
-  //   .then((response)=>response.json())
-  //   .then((data)=>{
-  //     setNationality(data.name)
-  //   })
-  // });
+  function handleSubmitForm(event) {
+    event.preventDefault();
+    const form = event.target;
+    const inputValue = form.inputName.value;
+    console.log(inputValue);
+
+    const ageURL = `https://api.agify.io/?name=${inputValue}`;
+    fetch(ageURL)
+      .then((response) => response.json())
+      .then((data) => {
+        setAge(data.age);
+      });
+    form.reset();
+  }
 
   return (
     <div className="App">
       <header className="App__header">
-        <Header />
+        <Header onSubmit={handleSubmitForm} />
       </header>
       <main className="App__main">
+        <form onSubmit={handleSubmitForm}>
+          <input
+            type="text"
+            name="inputName"
+            id="inputName"
+            placeholder="Type a name"
+          ></input>
+        </form>
         <Switch>
           <Route path="/age">
-            <Age />
+            <Age age={age} />
           </Route>
         </Switch>
         <Switch>
