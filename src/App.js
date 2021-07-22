@@ -10,7 +10,6 @@ import { even } from "check-types";
 function App() {
   const [nationality, setNationality] = useState([]);
 
-  // useEffect(() => {
   //   const url = "https://api.nationalize.io/?name=michael";
   //   fetch(url)
   //   .then((response)=>response.json())
