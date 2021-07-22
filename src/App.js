@@ -2,13 +2,22 @@ import "./App.css";
 import Age from "./pages/Age";
 import Gender from "./pages/Gender";
 import Nation from "./pages/Nation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Switch, Route, NavLink } from "react-router-dom";
 import { even } from "check-types";
 
 function App() {
-  //   const [name, setName] = useState([]);
+  const [nationality, setNationality] = useState([]);
+
+  // useEffect(() => {
+  //   const url = "https://api.nationalize.io/?name=michael";
+  //   fetch(url)
+  //   .then((response)=>response.json())
+  //   .then((data)=>{
+  //     setNationality(data.name)
+  //   })
+  // });
 
   //   function handleInputChange(event) {
   //     const inputValue = event.target.value;
