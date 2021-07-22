@@ -4,6 +4,7 @@ import Gender from "./pages/Gender";
 import Nation from "./pages/Nation";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
+import Form from "./components/Form";
 
 import { Switch, Route, NavLink } from "react-router-dom";
 import { even } from "check-types";
@@ -19,32 +20,12 @@ function App() {
   //   })
   // });
 
-  //   function handleInputChange(event) {
-  //     const inputValue = event.target.value;
-  //     setName(inputValue);
-  //     console.log(inputValue);
-  //   }
-
-  //   function handleSubmit(event){
-  //     event.preventDefault()
-
-  // }
-
   return (
     <div className="App">
       <header className="App__header">
         <Header />
       </header>
       <main className="App__main">
-        <form>
-          <input
-            type="text"
-            name="inputName"
-            id="inputName"
-            placeholder="Type a name"
-          ></input>
-          <button type="submit">Submit</button>
-        </form>
         <Switch>
           <Route path="/age">
             <Age />
